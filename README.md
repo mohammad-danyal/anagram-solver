@@ -1,7 +1,7 @@
 # anagram-solver
 Anagram code kata. Finds all two-word anagrams for a given word. 
 
-### Setup
+## Setup
 
 'WordList.cs' includes a StreamReader which will need modifying with the relevant file path in order to work. 
 
