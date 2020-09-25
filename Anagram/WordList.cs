@@ -29,7 +29,7 @@ namespace Anagram.Solver
 
         public List<string> GetWords()
         {
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\danya\OneDrive\Documents\University\Placement Year\Projects\Anagram\Anagram\wordlist.txt"))
+            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\danya\Desktop\AnagramCode\Anagram\wordlist.txt"))
             {
                 while (sr.Peek() >= 0)
                 {

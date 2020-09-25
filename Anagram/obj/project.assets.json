@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danya\\Documents\\old\\Anagram\\Anagram\\Anagram\\Anagram.csproj",
+      "projectUniqueName": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj",
       "projectName": "Anagram",
-      "projectPath": "C:\\Users\\danya\\Documents\\old\\Anagram\\Anagram\\Anagram\\Anagram.csproj",
+      "projectPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj",
       "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danya\\Documents\\old\\Anagram\\Anagram\\Anagram\\obj\\",
+      "outputPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",

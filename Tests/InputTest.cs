@@ -18,7 +18,6 @@ namespace GetWordsTest
             InputValidater inputvalidate = new InputValidater();
 
             Assert.True(inputvalidate.IsInputValid(input));
-
         }
 
         [Theory]
@@ -33,7 +32,6 @@ namespace GetWordsTest
             Assert.False(inputvalidate.IsInputValid(input));
 
         }
-
 
     }
 

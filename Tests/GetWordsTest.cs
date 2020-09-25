@@ -1,6 +1,7 @@
 using System;
 using Anagram;
 using Anagram.Solver;
+using FluentAssertions;
 using Xunit;
 
 namespace GetWordsTest
@@ -16,7 +17,7 @@ namespace GetWordsTest
 
             WordList possibleWords = new WordList(word);
 
-            Assert.True(0 < possibleWords.GetWords().Count);
+            (possibleWords.GetWords().Count).Should().BeGreaterThan(0);
 
         }
 
@@ -28,7 +29,7 @@ namespace GetWordsTest
 
             WordList possibleWords = new WordList(word);
 
-            Assert.True(0 == possibleWords.GetWords().Count);
+            (possibleWords.GetWords().Count).Should().BeGreaterThan(0);
         }
     }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Anagram;
 using Anagram.Solver;
+using FluentAssertions;
 using Xunit;
 
 namespace GetPairsTest
@@ -25,7 +26,7 @@ namespace GetPairsTest
 
             PairCalculator pairCalculator = new PairCalculator(list, mainWord);
 
-            Assert.True(expected == pairCalculator.GetPairs(mainWord).Count);
+            (expected == pairCalculator.GetPairs(mainWord).Count).Should().BeTrue();
 
         }
 
