@@ -11,7 +11,6 @@
           "Anagram": "1.0.0",
           "FluentAssertions": "5.10.3",
           "Microsoft.NET.Test.Sdk": "16.5.0",
-          "coverlet.collector": "1.2.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -19,7 +18,6 @@
           "Tests.dll": {}
         }
       },
-      "coverlet.collector/1.2.0": {},
       "FluentAssertions/5.10.3": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.4.0"
@@ -740,13 +738,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "coverlet.collector/1.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZB+EGXsVBIn8cew7D3S2c+rgIlokKv1dSwsXEoiFQaNXF/BSxp9Rlfz/jV1ehSWH5XpLitfRxFNW3ok7uPDOXA==",
-      "path": "coverlet.collector/1.2.0",
-      "hashPath": "coverlet.collector.1.2.0.nupkg.sha512"
     },
     "FluentAssertions/5.10.3": {
       "type": "package",

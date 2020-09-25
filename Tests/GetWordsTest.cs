@@ -29,7 +29,7 @@ namespace GetWordsTest
 
             WordList possibleWords = new WordList(word);
 
-            (possibleWords.GetWords().Count).Should().BeGreaterThan(0);
+            (possibleWords.GetWords().Count).Should().Be(0);
         }
     }
 

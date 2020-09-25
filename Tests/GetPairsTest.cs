@@ -43,7 +43,7 @@ namespace GetPairsTest
 
             PairCalculator pairCalculator = new PairCalculator(list, word);
 
-            Assert.True(0 == pairCalculator.GetPairs(word).Count);
+            (0 == pairCalculator.GetPairs(word).Count).Should().BeTrue();
 
         }
     }
