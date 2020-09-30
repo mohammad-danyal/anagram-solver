@@ -11,8 +11,8 @@ namespace GetPairsTest
     {
 
         [Theory]
-        [InlineData ("aaaccc", "aaa", "ccc", "", "", 1)]
-        [InlineData("abcd", "ab", "cd", "ac" , "bd" , 2)]
+        [InlineData("aaaccc", "aaa", "ccc", "", "", 1)]
+        [InlineData("abcd", "ab", "cd", "ac", "bd", 2)]
         public void ValidPairsTest(string mainWord, string firstWord, string secondWord, string thirdWord, string fourthWord, int expected)
         {
 
@@ -26,7 +26,7 @@ namespace GetPairsTest
 
             PairCalculator pairCalculator = new PairCalculator(list, mainWord);
 
-            (expected == pairCalculator.GetPairs(mainWord).Count).Should().BeTrue();
+            (pairCalculator.GetPairs(mainWord).Count).Should().Be(expected);
 
         }
 
@@ -43,7 +43,7 @@ namespace GetPairsTest
 
             PairCalculator pairCalculator = new PairCalculator(list, word);
 
-            (0 == pairCalculator.GetPairs(word).Count).Should().BeTrue();
+            (pairCalculator.GetPairs(word).Count).Should().Be(0);
 
         }
     }
