@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Anagram.Solver
@@ -29,8 +30,9 @@ namespace Anagram.Solver
 
         public List<string> GetPairs(string mainWord)
         {
-
-            List<string> possiblePairs = new List<string>();
+            //linq in place of loops
+            //generic types
+            var possiblePairs = new List<string>();
 
             for (int a = 0; a < possibleWords.Count; a++)
             {
@@ -47,13 +49,13 @@ namespace Anagram.Solver
 
         public List<string> SortPairs(string mainWord, List<string> possiblePairs) {
 
-            List<string> Pairs = new List<string>();
+            var Pairs = new List<string>();
 
             foreach (String possiblePair in possiblePairs)
             {
 
-                string currentPair = possiblePair;
-                string possiblePairNoSpaces = possiblePair.Replace(" ", "");
+                var currentPair = possiblePair;
+                var possiblePairNoSpaces = possiblePair.Replace(" ", "");
 
                 char[] ch1 = mainWord.ToCharArray();
                 char[] ch2 = possiblePairNoSpaces.ToCharArray();
@@ -61,10 +63,11 @@ namespace Anagram.Solver
                 Array.Sort(ch1);
                 Array.Sort(ch2);
 
-                String val1 = new string(ch1);
-                String val2 = new string(ch2);
+                var val1 = new string(ch1);
+                var val2 = new string(ch2);
 
-
+                //extension methods
+                //new class for possible pairings
 
                 if (val1 == val2)
                 {
