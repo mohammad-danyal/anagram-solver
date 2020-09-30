@@ -11,5 +11,6 @@ The word list I have used for this project is taken from here: https://github.co
 
 However, the program will work with other word lists provided they are in a .txt file. 
 
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
