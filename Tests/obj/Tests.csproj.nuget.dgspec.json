@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danya\\Desktop\\AnagramCode\\Tests\\Tests.csproj": {}
+    "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj": {
+    "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj",
+        "projectUniqueName": "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj",
         "projectName": "Anagram",
-        "projectPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj",
+        "projectPath": "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj",
         "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\obj\\",
+        "outputPath": "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\danya\\Desktop\\AnagramCode\\Tests\\Tests.csproj": {
+    "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danya\\Desktop\\AnagramCode\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Tests\\Tests.csproj",
+        "projectPath": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj": {
-                "projectPath": "C:\\Users\\danya\\Desktop\\AnagramCode\\Anagram\\Anagram.csproj"
+              "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj": {
+                "projectPath": "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj"
               }
             }
           }
@@ -101,6 +101,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
             },
             "xunit": {
               "target": "Package",

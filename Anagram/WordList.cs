@@ -29,7 +29,9 @@ namespace Anagram.Solver
 
         public List<string> GetWords()
         {
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\danya\Desktop\AnagramCode\Anagram\wordlist.txt"))
+
+            //refactor
+            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\danya\Desktop\anagram-solver\wordlist.txt"))
             {
                 while (sr.Peek() >= 0)
                 {
@@ -58,19 +60,11 @@ namespace Anagram.Solver
                             possibleWords.Add(word); //if all the chars are correct add it to the list.
 
                         }
-                        else
-                        {
-
-                        }
 
                     }
 
                 }
             }
-
-
-            //PairCalculator pairCalculator = new PairCalculator(possibleWords, mainWord);
-            //pairCalculator.GetPairs(mainWord).ForEach(Console.WriteLine);
 
             return possibleWords;
         } 
