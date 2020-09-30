@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Anagram.Solver
 {
@@ -14,36 +15,19 @@ namespace Anagram.Solver
 
     public class InputValidater
     {
-        private string input;
+
 
         public bool IsInputValid(string input)
         {
-
-            this.input = input;
-
-            if (IsAllLetters(input))
-            {
-                return true;
-                } else
-            {
-                return false;
-            }
+            return (IsAllLetters(input));
         }
-
 
         static bool IsAllLetters(string s)
         {
-            foreach (char c in s)
-            {
-                if (!Char.IsLetter(c))
-                    return false;
-            }
-            return true;
+            return (s.All(Char.IsLetter));
         }
 
     }
-
-    
 }
 
 
