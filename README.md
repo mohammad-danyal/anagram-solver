@@ -1,5 +1,5 @@
 # anagram-solver
-Anagram code kata. Finds all two-word anagrams for a given word. 
+Anagram code kata. Searches a word list to find all two-word anagrams for an inputted word.
 
 ## Setup
 
