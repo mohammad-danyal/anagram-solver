@@ -25,17 +25,12 @@ namespace Anagram
                 InputValidater inputvalidate = new InputValidater();
 
                 if (inputvalidate.IsInputValid(word)) {
-
-                    WordList possibleWords = new WordList(word);
-
-                    PairCalculator pairCalculator = new PairCalculator(possibleWords.GetWords(), word);
-                    pairCalculator.GetPairs(word).ForEach(Console.WriteLine);
-
-                    if (pairCalculator.GetPairs(word).Count == 0)
-                    {
-                        Console.WriteLine("\nNo anagrams are possible for your word");
-                    }
-
+  
+                    AnagramSolver.FindAnagrams(word);
+                   
+                } else
+                {
+                    Console.WriteLine("Error: Input is not a valid word");
                 }
 
             }
