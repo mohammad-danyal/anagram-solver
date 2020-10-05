@@ -9,7 +9,7 @@ namespace Anagram.Solver
 {
 
     /**
-    * Class which works out the appropriate pairs of words.
+    * Class for the pairs of words.
     *
     * @author Mohammad Danyal
     * @version September 2020
