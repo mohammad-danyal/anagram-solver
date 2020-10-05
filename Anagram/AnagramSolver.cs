@@ -21,8 +21,11 @@ namespace Anagram.Solver
             var pairCalculator = new PairCalculator(possibleWords.GetWords(), word);
             var pairs = pairCalculator.GetPairs(word);
 
-            pairs.ForEach(Console.WriteLine);
-
+            foreach (Pair pair in pairs)
+            {
+                Console.WriteLine(pair.firstWord + " " + pair.secondWord);
+            }
+  
             if (pairs.Count == 0)
             {
                 Console.WriteLine("");

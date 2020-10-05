@@ -14,7 +14,7 @@ namespace Anagram.Solver
     * @version September 2020
     */
 
-    public class PairCalculator
+    public class PairCalculator 
     {
         private List<string> possibleWords;
 
@@ -29,27 +29,24 @@ namespace Anagram.Solver
             GetPairs(mainWord);
         }
 
-        public List<string> GetPairs(string mainWord)
+        public List<Pair> GetPairs(string mainWord)
         {
-            var possiblePairs = (possibleWords.SelectMany(possibleWord1 => possibleWords
-            .Where(possibleWord2 => !(possibleWord1 == possibleWord2))
-            .Where(possibleWord2 => (possibleWord1.Length + possibleWord2.Length) == mainWord.Length)
-            .Select(possibleWord2 => possibleWord1 + ' ' + possibleWord2))).ToList();
+            var possiblePairs = (possibleWords.SelectMany(possibleWordOne => possibleWords
+            .Where(possibleWordTwo => !(possibleWordOne == possibleWordTwo))
+            .Where(possibleWordTwo => (possibleWordOne.Length + possibleWordTwo.Length) == mainWord.Length)
+            .Select(possibleWordTwo => new Pair { firstWord = possibleWordOne, secondWord = possibleWordTwo }))).ToList();
             return SortPairs(mainWord, possiblePairs);
         } 
 
-        public List<string> SortPairs(string mainWord, List<string> possiblePairs) {
+        public List<Pair> SortPairs(string mainWord, List<Pair> possiblePairs) {
 
-            var Pairs = new List<string>();
+            var Pairs = new List<Pair>();
 
             foreach (var possiblePair in possiblePairs)
             {
 
-                var currentPair = possiblePair;
-                var possiblePairNoSpaces = possiblePair.Replace(" ", "");
-
                 char[] ch1 = mainWord.ToCharArray();
-                char[] ch2 = possiblePairNoSpaces.ToCharArray();
+                char[] ch2 = (possiblePair.firstWord + possiblePair.secondWord).ToCharArray();
 
                 Array.Sort(ch1);
                 Array.Sort(ch2);
@@ -61,7 +58,7 @@ namespace Anagram.Solver
 
                 if (val1 == val2)
                 {
-                    Pairs.Add(currentPair);
+                    Pairs.Add(possiblePair);
                 }
 
             }
