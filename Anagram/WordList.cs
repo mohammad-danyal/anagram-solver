@@ -37,10 +37,10 @@ namespace Anagram.Solver
                 {
                     string line = sr.ReadLine();
                     string[] words = line.Split(' ');
-                    foreach (string word in words)
+                    foreach (var word in words)
                     {
 
-                        foreach (Char c in word)
+                        foreach (var c in word)
                         {
 
                             if (!mainWord.Contains(c))

@@ -31,23 +31,10 @@ namespace Anagram.Solver
 
         public List<string> GetPairs(string mainWord)
         {
-            //linq in place of loops
-            //generic types
-            var possiblePairs = new List<string>();
-
-            for (int i = 0; i < possibleWords.Count; i++) {
-                
-                for (int j = 0; j < possibleWords.Count; j++)
-                {
-                    if (!(possibleWords[i] == possibleWords[j]))
-                    {
-                        if ((possibleWords[j].Length + possibleWords[i].Length) == mainWord.Length)
-                        {
-                            possiblePairs.Add(possibleWords[i] + ' ' + possibleWords[j]);
-                        }
-                    }
-                }
-            }
+            var possiblePairs = (possibleWords.SelectMany(possibleWord1 => possibleWords
+            .Where(possibleWord2 => !(possibleWord1 == possibleWord2))
+            .Where(possibleWord2 => (possibleWord1.Length + possibleWord2.Length) == mainWord.Length)
+            .Select(possibleWord2 => possibleWord1 + ' ' + possibleWord2))).ToList();
             return SortPairs(mainWord, possiblePairs);
         } 
 
@@ -55,7 +42,7 @@ namespace Anagram.Solver
 
             var Pairs = new List<string>();
 
-            foreach (String possiblePair in possiblePairs)
+            foreach (var possiblePair in possiblePairs)
             {
 
                 var currentPair = possiblePair;
@@ -70,7 +57,6 @@ namespace Anagram.Solver
                 var val1 = new string(ch1);
                 var val2 = new string(ch2);
 
-                //extension methods
                 //new class for possible pairings
 
                 if (val1 == val2)
