@@ -39,9 +39,12 @@ namespace Anagram.Solver
                 
                 for (int j = 0; j < possibleWords.Count; j++)
                 {
-                    if ((possibleWords[j].Length + possibleWords[i].Length) == mainWord.Length)
+                    if (!(possibleWords[i] == possibleWords[j]))
                     {
-                        possiblePairs.Add(possibleWords[i] + ' ' + possibleWords[j]);
+                        if ((possibleWords[j].Length + possibleWords[i].Length) == mainWord.Length)
+                        {
+                            possiblePairs.Add(possibleWords[i] + ' ' + possibleWords[j]);
+                        }
                     }
                 }
             }
