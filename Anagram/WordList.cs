@@ -30,45 +30,47 @@ namespace Anagram.Solver
         public List<string> GetWords()
         {
 
-            //refactor
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(@"C:\Users\danya\Desktop\anagram-solver\wordlist.txt"))
+            using (System.IO.StreamReader sr = new System.IO.StreamReader(Reader.GetFile()))
             {
                 while (sr.Peek() >= 0)
                 {
                     string line = sr.ReadLine();
                     string[] words = line.Split(' ');
-                    foreach (var word in words)
-                    {
-
-                        foreach (var c in word)
-                        {
-
-                            if (!mainWord.Contains(c))
-                            {
-                                containsIllegalChar = true;
-                                break;
-                            }
-                            else
-                            {
-                                containsIllegalChar = false;
-                            }
-
-                        }
-
-                        if (containsIllegalChar == false)
-                        {
-                            possibleWords.Add(word); //if all the chars are correct add it to the list.
-
-                        }
-
-                    }
-
+                    CheckWords(words);
                 }
             }
 
             return possibleWords;
-        } 
+        }
 
+        public void CheckWords(string[] words)
+        {
+            foreach (var word in words)
+            {
+
+                foreach (var c in word)
+                {
+
+                    if (!mainWord.Contains(c))
+                    {
+                        containsIllegalChar = true;
+                        break;
+                    }
+                    else
+                    {
+                        containsIllegalChar = false;
+                    }
+
+                }
+
+                if (containsIllegalChar == false)
+                {
+                    possibleWords.Add(word); //if all the chars are correct add it to the list.
+
+                }
+
+            }
+        }
     }
 
 
