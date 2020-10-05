@@ -3664,11 +3664,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\danya\\Desktop\\anagram-solver\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj",
+      "projectPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\obj\\",
+      "outputPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3684,8 +3684,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj": {
-              "projectPath": "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj"
+            "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj": {
+              "projectPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj"
             }
           }
         }

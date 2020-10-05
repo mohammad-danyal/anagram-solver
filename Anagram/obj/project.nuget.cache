@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QC/EQSi+IApheWaoc4ZQNQnFm0QGevq++Hy6Ty/hLG+qCemnbajbUXBpwAt6cCCRQbvWxNEk1j3gjXrXgtphtA==",
+  "dgSpecHash": "4Tg2WVu3IELT+htc/J/DLtewLUn5TZdzUhUP2nE7wuU4Rg9oFGa3slm5pwJy66KimCJpWNeb4XW6rSSnpOk8Vg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danya\\Desktop\\gitana\\Anagram\\Anagram.csproj",
+  "projectFilePath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

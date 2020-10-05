@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I+Al6TjaRdQShrAFnyuBbOAV1w0hFYehvLEpMjqP1io1kpU/pnmw8dBYDTQdTzt/HN20Ui/rMA6CkueZwDEenA==",
+  "dgSpecHash": "BU+NxaTZSKTnoUAHmOE2CeYZTsTfEeydySrQvMI+AK7UCoy+cy/xC5nPWhdc6dcMI4sOqcSpopeF7bm5euw4MQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danya\\Desktop\\gitana\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danya\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",

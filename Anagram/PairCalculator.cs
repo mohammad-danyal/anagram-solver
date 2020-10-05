@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace Anagram.Solver
 {
@@ -34,13 +35,13 @@ namespace Anagram.Solver
             //generic types
             var possiblePairs = new List<string>();
 
-            for (int a = 0; a < possibleWords.Count; a++)
-            {
-                for (int b = 1; b < possibleWords.Count - 1; b++)
+            for (int i = 0; i < possibleWords.Count; i++) {
+                
+                for (int j = 0; j < possibleWords.Count; j++)
                 {
-                    if ((possibleWords[a].Length + possibleWords[b].Length) == mainWord.Length)
+                    if ((possibleWords[j].Length + possibleWords[i].Length) == mainWord.Length)
                     {
-                        possiblePairs.Add(possibleWords[a] + ' ' + possibleWords[b]);
+                        possiblePairs.Add(possibleWords[i] + ' ' + possibleWords[j]);
                     }
                 }
             }
