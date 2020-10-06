@@ -17,11 +17,9 @@ namespace Anagram.Solver
 
     public class Pair
     {
-
         public string firstWord { get; set; }
 
         public string secondWord { get; set; }
-
     }
 }
 

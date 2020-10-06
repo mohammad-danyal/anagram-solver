@@ -18,16 +18,27 @@ namespace Anagram
 
             while (true)
             {
-
-                Console.WriteLine("\nEnter a word: ");
+                Console.WriteLine("");
+                Console.WriteLine("Enter a word: ");
                 string word = Console.ReadLine();
 
                 InputValidater inputvalidate = new InputValidater();
 
                 if (inputvalidate.IsInputValid(word)) {
   
-                    AnagramSolver.FindAnagrams(word);
-                   
+                    var pairs = AnagramSolver.FindAnagrams(word);
+
+                    foreach (Pair pair in pairs)
+                    {
+                        Console.WriteLine(pair.firstWord + " " + pair.secondWord);
+                    }
+
+                    if (pairs.Count == 0)
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("No anagrams are possible for your word");
+                    }
+
                 } else
                 {
                     Console.WriteLine("Error: Input is not a valid word");

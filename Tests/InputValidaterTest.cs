@@ -1,11 +1,12 @@
 using System;
 using Anagram;
 using Anagram.Solver;
+using FluentAssertions;
 using Xunit;
 
-namespace GetWordsTest
+namespace InputValidaterTest
 {
-    public class InputTest
+    public class InputValidaterTest
     {
 
         [Theory]
@@ -17,7 +18,7 @@ namespace GetWordsTest
 
             InputValidater inputvalidate = new InputValidater();
 
-            Assert.True(inputvalidate.IsInputValid(input));
+           inputvalidate.IsInputValid(input).Should().Be(true);
         }
 
         [Theory]
@@ -29,7 +30,7 @@ namespace GetWordsTest
 
             InputValidater inputvalidate = new InputValidater();
 
-            Assert.False(inputvalidate.IsInputValid(input));
+            inputvalidate.IsInputValid(input).Should().Be(false);
 
         }
 

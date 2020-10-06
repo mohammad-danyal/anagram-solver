@@ -50,3 +50,16 @@ C:\Users\danya\Desktop\gitana\Anagram\obj\Debug\netcoreapp3.1\Anagram.csproj.Cor
 C:\Users\danya\Desktop\gitana\Anagram\obj\Debug\netcoreapp3.1\Anagram.dll
 C:\Users\danya\Desktop\gitana\Anagram\obj\Debug\netcoreapp3.1\Anagram.pdb
 C:\Users\danya\Desktop\gitana\Anagram\obj\Debug\netcoreapp3.1\Anagram.genruntimeconfig.cache
+C:\Users\danya\Desktop\githubrecent\Anagram\bin\Debug\netcoreapp3.1\Anagram.exe
+C:\Users\danya\Desktop\githubrecent\Anagram\bin\Debug\netcoreapp3.1\Anagram.deps.json
+C:\Users\danya\Desktop\githubrecent\Anagram\bin\Debug\netcoreapp3.1\Anagram.runtimeconfig.json
+C:\Users\danya\Desktop\githubrecent\Anagram\bin\Debug\netcoreapp3.1\Anagram.runtimeconfig.dev.json
+C:\Users\danya\Desktop\githubrecent\Anagram\bin\Debug\netcoreapp3.1\Anagram.dll
+C:\Users\danya\Desktop\githubrecent\Anagram\bin\Debug\netcoreapp3.1\Anagram.pdb
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.csprojAssemblyReference.cache
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.AssemblyInfoInputs.cache
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.AssemblyInfo.cs
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.csproj.CoreCompileInputs.cache
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.dll
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.pdb
+C:\Users\danya\Desktop\githubrecent\Anagram\obj\Debug\netcoreapp3.1\Anagram.genruntimeconfig.cache
