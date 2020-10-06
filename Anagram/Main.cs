@@ -3,8 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Linq.Expressions;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 
 namespace Anagram
 {
@@ -20,17 +18,17 @@ namespace Anagram
             {
                 Console.WriteLine("");
                 Console.WriteLine("Enter a word: ");
-                string word = Console.ReadLine();
+                var word = Console.ReadLine();
 
-                InputValidater inputvalidate = new InputValidater();
+                InputValidater inputvalidate = new InputValidater(); //
 
                 if (inputvalidate.IsInputValid(word)) {
   
-                    var pairs = AnagramSolver.FindAnagrams(word);
+                    var pairs = AnagramSolver.FindAnagrams(word); //
 
-                    foreach (Pair pair in pairs)
+                    foreach (var pair in pairs)
                     {
-                        Console.WriteLine(pair.firstWord + " " + pair.secondWord);
+                        Console.WriteLine(pair.firstWord + " " + pair.secondWord); //
                     }
 
                     if (pairs.Count == 0)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
@@ -34,7 +35,7 @@ namespace Anagram.Solver
             {
                 while (sr.Peek() >= 0)
                 {
-                    string line = sr.ReadLine();
+                    var line = sr.ReadLine();
                     string[] words = line.Split(' ');
                     CheckWords(words);
                 }
@@ -43,7 +44,7 @@ namespace Anagram.Solver
             return possibleWords;
         }
 
-        public void CheckWords(string[] words)
+         private void CheckWords(string[] words)
         {
             foreach (var word in words)
             {

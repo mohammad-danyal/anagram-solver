@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Anagram.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace Anagram.Solver
     * @version September 2020
     */
 
-    public class PairCalculator 
+    public class PairCalculator
     {
         private List<string> possibleWords;
 
@@ -36,24 +37,18 @@ namespace Anagram.Solver
             .Where(possibleWordTwo => (possibleWordOne.Length + possibleWordTwo.Length) == mainWord.Length)
             .Select(possibleWordTwo => new Pair { firstWord = possibleWordOne, secondWord = possibleWordTwo }))).ToList();
             return SortPairs(mainWord, possiblePairs);
-        } 
+        }
 
-        public List<Pair> SortPairs(string mainWord, List<Pair> possiblePairs) {
+        public List<Pair> SortPairs(string mainWord, List<Pair> possiblePairs)
+        {
 
             var Pairs = new List<Pair>();
 
+            char[] ch1 = mainWord.ToCharArray();
             foreach (var possiblePair in possiblePairs)
             {
-
-                char[] ch1 = mainWord.ToCharArray();
-                char[] ch2 = (possiblePair.firstWord + possiblePair.secondWord).ToCharArray();
-
-                Array.Sort(ch1);
-                Array.Sort(ch2);
-
-                var val1 = new string(ch1);
-                var val2 = new string(ch2);
-
+                var val1 = mainWord.SortAlphabetically();
+                var val2 = (possiblePair.firstWord + possiblePair.secondWord).SortAlphabetically();
 
                 if (val1 == val2)
                 {
@@ -63,8 +58,8 @@ namespace Anagram.Solver
             }
 
             return Pairs;
-        }
 
+        }
     }
 }
 
