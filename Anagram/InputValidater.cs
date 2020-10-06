@@ -7,7 +7,7 @@ namespace Anagram.Solver
 {
 
     /**
-    * Displays a input messsage.
+    * Input validation class ensuring input is of the correct format of a word.
     *
     * @author Mohammad Danyal
     * @version September 2020
@@ -15,8 +15,6 @@ namespace Anagram.Solver
 
     public class InputValidater
     {
-
-
         public bool IsInputValid(string input)
         {
             return (IsAllLetters(input));
