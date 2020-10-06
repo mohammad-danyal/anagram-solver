@@ -54,7 +54,6 @@ namespace Anagram.Solver
                 var val1 = new string(ch1);
                 var val2 = new string(ch2);
 
-                //new class for possible pairings
 
                 if (val1 == val2)
                 {

@@ -65,7 +65,7 @@ namespace Anagram.Solver
 
                 if (containsIllegalChar == false)
                 {
-                    possibleWords.Add(word); //if all the chars are correct add it to the list.
+                    possibleWords.Add(word); 
 
                 }
 
