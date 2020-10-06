@@ -7,7 +7,7 @@ namespace Anagram.Solver
 {
 
     /**
-    * Displays a input messsage.
+    * Anagram solver class.
     *
     * @author Mohammad Danyal
     * @version September 2020
@@ -15,22 +15,13 @@ namespace Anagram.Solver
 
     public class AnagramSolver
     {
-        public static void FindAnagrams(string word)
+        public static List<Pair> FindAnagrams(string word)
         {
             var possibleWords = new WordList(word);
             var pairCalculator = new PairCalculator(possibleWords.GetWords(), word);
             var pairs = pairCalculator.GetPairs(word);
 
-            foreach (Pair pair in pairs)
-            {
-                Console.WriteLine(pair.firstWord + " " + pair.secondWord);
-            }
-  
-            if (pairs.Count == 0)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("No anagrams are possible for your word");
-            }
+            return pairs;
         }
     }
 }
