@@ -20,6 +20,14 @@ namespace Anagram.Solver
         public string firstWord { get; set; }
 
         public string secondWord { get; set; }
+
+        private string _combinedWord;
+        public string combinedWord
+        {
+            get { return (firstWord + " " + secondWord); }
+
+        }
+
     }
 }
 

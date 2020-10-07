@@ -13,9 +13,9 @@ namespace Anagram.Solver
     * @version September 2020
     */
 
-    public class AnagramSolver
+    public class AnagramSolver : IAnagramSolver
     {
-        public static List<Pair> FindAnagrams(string word)
+        public List<Pair> FindAnagrams(string word)
         {
             var possibleWords = new WordList(word);
             var pairCalculator = new PairCalculator(possibleWords.GetWords(), word);

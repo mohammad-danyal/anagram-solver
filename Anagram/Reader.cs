@@ -17,7 +17,7 @@ namespace Anagram.Solver
 
         public static string GetFile()
         {
-            string path = @"C:\Users\danya\Desktop\anagram-solver\wordlist.txt";
+            string path = @"C:\Users\danya\Desktop\githubInterface\wordlist.txt";
 
             return path;
         }

@@ -13,7 +13,7 @@ namespace Anagram.Solver
     * @version September 2020
     */
 
-    public class InputValidater
+    public class InputValidater : IInputValidater
     {
         public bool IsInputValid(string input)
         {

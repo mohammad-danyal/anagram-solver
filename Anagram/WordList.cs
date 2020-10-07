@@ -13,7 +13,7 @@ namespace Anagram.Solver
     * @version September 2020
     */
 
-    public class WordList
+    public class WordList : IWordList
     {
         List<string> possibleWords = new List<string>();
         bool containsIllegalChar = false;
@@ -25,7 +25,7 @@ namespace Anagram.Solver
         */
         public WordList(string mainWord)
         {
-            this.mainWord = mainWord;;
+            this.mainWord = mainWord; ;
         }
 
         public List<string> GetWords()
@@ -44,7 +44,7 @@ namespace Anagram.Solver
             return possibleWords;
         }
 
-         private void CheckWords(string[] words)
+        private void CheckWords(string[] words)
         {
             foreach (var word in words)
             {
@@ -66,7 +66,7 @@ namespace Anagram.Solver
 
                 if (containsIllegalChar == false)
                 {
-                    possibleWords.Add(word); 
+                    possibleWords.Add(word);
 
                 }
 

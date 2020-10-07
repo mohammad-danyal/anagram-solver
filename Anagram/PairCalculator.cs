@@ -15,7 +15,7 @@ namespace Anagram.Solver
     * @version September 2020
     */
 
-    public class PairCalculator
+    public class PairCalculator : IPairCalculator
     {
         private List<string> possibleWords;
 

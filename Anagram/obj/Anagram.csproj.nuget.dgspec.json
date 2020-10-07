@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danya\\Desktop\\githubrecent\\Anagram\\Anagram.csproj": {}
+    "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danya\\Desktop\\githubrecent\\Anagram\\Anagram.csproj": {
+    "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danya\\Desktop\\githubrecent\\Anagram\\Anagram.csproj",
+        "projectUniqueName": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj",
         "projectName": "Anagram",
-        "projectPath": "C:\\Users\\danya\\Desktop\\githubrecent\\Anagram\\Anagram.csproj",
+        "projectPath": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj",
         "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danya\\Desktop\\githubrecent\\Anagram\\obj\\",
+        "outputPath": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",

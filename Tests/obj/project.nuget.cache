@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BoNYf9LBfIW/TFHQE7Cup+TTjwc+zRgB7kfnAe+aEdulrv68fxiKa8vI0WdbNcm1PeBpjL+b7q8477V/0+ZlkQ==",
+  "dgSpecHash": "7XQw0uy0EC+gt6OhC/3CiRUxgqxf2E5udjEcaGJIcS4CMdl9PUNeNsYaEE8r1FzDFd5RCwXFzf+QTCS7CrXHJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danya\\Desktop\\githubrecent\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\danya\\Desktop\\githubInterface\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danya\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",

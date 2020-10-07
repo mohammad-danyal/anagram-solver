@@ -13,22 +13,22 @@ namespace Anagram
         {
             Console.WriteLine("Welcome to the Anagram Solver!");
 
-
             while (true)
             {
                 Console.WriteLine("");
                 Console.WriteLine("Enter a word: ");
                 var word = Console.ReadLine();
 
-                InputValidater inputvalidate = new InputValidater(); //
+                IInputValidater inputvalidate = Factory.CreateValidater(); //
 
                 if (inputvalidate.IsInputValid(word)) {
-  
-                    var pairs = AnagramSolver.FindAnagrams(word); //
+
+                    IAnagramSolver solver = Factory.CreateSolver();
+                    var pairs = solver.FindAnagrams(word); //
 
                     foreach (var pair in pairs)
                     {
-                        Console.WriteLine(pair.firstWord + " " + pair.secondWord); //
+                        Console.WriteLine(pair.combinedWord); //
                     }
 
                     if (pairs.Count == 0)
