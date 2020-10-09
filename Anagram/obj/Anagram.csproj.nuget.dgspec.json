@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj": {}
+    "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj": {
+    "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj",
+        "projectUniqueName": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
         "projectName": "Anagram",
-        "projectPath": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj",
+        "projectPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
         "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\obj\\",
+        "outputPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

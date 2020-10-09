@@ -23,12 +23,8 @@ namespace Anagram.Solver
         * 
         * @param mainWord holds the word which we are finding anagrams for.
         */
-        public WordList(string mainWord)
-        {
-            this.mainWord = mainWord; ;
-        }
 
-        public List<string> GetWords()
+        public List<string> GetWords(string mainWord)
         {
 
             using (System.IO.StreamReader sr = new System.IO.StreamReader(Reader.GetFile()))
@@ -37,14 +33,14 @@ namespace Anagram.Solver
                 {
                     var line = sr.ReadLine();
                     string[] words = line.Split(' ');
-                    CheckWords(words);
+                    CheckWords(words, mainWord);
                 }
             }
 
             return possibleWords;
         }
 
-        private void CheckWords(string[] words)
+        private void CheckWords(string[] words, string mainWord)
         {
             foreach (var word in words)
             {

@@ -1,4 +1,5 @@
 ﻿using Anagram.Solver;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
@@ -19,12 +20,20 @@ namespace Anagram
                 Console.WriteLine("Enter a word: ");
                 var word = Console.ReadLine();
 
-                IInputValidater inputvalidate = Factory.CreateValidater(); //
+                var serviceProvider = new ServiceCollection()
+                    .AddTransient<IInputValidater, InputValidater>()
+                    .AddTransient<IAnagramSolver, AnagramSolver>()
+                    .AddTransient<IWordList, WordList>()
+                    .AddScoped<IPairCalculator, PairCalculator>()
+
+                    .BuildServiceProvider();
+
+                var inputvalidate = serviceProvider.GetService<IInputValidater>(); //
 
                 if (inputvalidate.IsInputValid(word)) {
 
-                    IAnagramSolver solver = Factory.CreateSolver();
-                    var pairs = solver.FindAnagrams(word); //
+                    var solver = serviceProvider.GetService<IAnagramSolver>();
+                    var pairs = solver.FindAnagrams(word, serviceProvider); //
 
                     foreach (var pair in pairs)
                     {

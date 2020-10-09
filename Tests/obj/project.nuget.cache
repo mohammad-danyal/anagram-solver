@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "7XQw0uy0EC+gt6OhC/3CiRUxgqxf2E5udjEcaGJIcS4CMdl9PUNeNsYaEE8r1FzDFd5RCwXFzf+QTCS7CrXHJQ==",
+  "dgSpecHash": "+QsSNQUWGNFL2dDPjas533G8FWh+diLaOoN6SpMZlEKB06hueXio3FWHew+e0SpTKSNTtHgwW5qKn68p9uKUDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danya\\Desktop\\githubInterface\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danya\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.8\\microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
+    "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\danya\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",

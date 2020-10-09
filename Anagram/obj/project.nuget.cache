@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lj/5gNfJy3/+fBNSYV3JmUQTsUqorFyYIgd4WUq+28YiblVnofW2QEX/NyhR3u1xDGk8iiCJ2MjapISiZ9sW4A==",
+  "dgSpecHash": "royJB8MTT20e7nNCyPrcci0KnABxOLa7NhncOli/dw1blY0Rvi+6iJjmxzzQzQRLa5y7PDuOmw+ddi/6PTm2qQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danya\\Desktop\\githubInterface\\Anagram\\Anagram.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.8\\microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
+    "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512"
+  ],
   "logs": []
 }

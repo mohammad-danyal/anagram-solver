@@ -4,6 +4,6 @@ namespace Anagram.Solver
 {
     public interface IWordList
     {
-        List<string> GetWords();
+        List<string> GetWords(string mainWord);
     }
 }

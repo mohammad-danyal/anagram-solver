@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Anagram.Solver
 {
@@ -15,11 +16,14 @@ namespace Anagram.Solver
 
     public class AnagramSolver : IAnagramSolver
     {
-        public List<Pair> FindAnagrams(string word)
+        public List<Pair> FindAnagrams(string word, ServiceProvider serviceProvider)
         {
-            var possibleWords = new WordList(word);
-            var pairCalculator = new PairCalculator(possibleWords.GetWords(), word);
-            var pairs = pairCalculator.GetPairs(word);
+            var words = serviceProvider.GetService<IWordList>();
+            var possibleWords = words.GetWords(word);
+
+            var pairCalculator = serviceProvider.GetService<IPairCalculator>();
+
+            var pairs = pairCalculator.GetPairs(word, possibleWords);
 
             return pairs;
         }
