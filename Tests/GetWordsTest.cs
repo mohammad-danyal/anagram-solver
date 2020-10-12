@@ -15,9 +15,9 @@ namespace GetWordsTest
 
             string word = "blue";
 
-            WordList possibleWords = new WordList(word);
+            WordList possibleWords = new WordList();
 
-            (possibleWords.GetWords().Count).Should().BeGreaterThan(0);
+            (possibleWords.GetWords(word).Count).Should().BeGreaterThan(0);
 
         }
 
@@ -27,9 +27,9 @@ namespace GetWordsTest
 
             string word = "bcd";
 
-            WordList possibleWords = new WordList(word);
+            WordList possibleWords = new WordList();
 
-            (possibleWords.GetWords().Count).Should().Be(0);
+            (possibleWords.GetWords(word).Count).Should().Be(0);
         }
     }
 

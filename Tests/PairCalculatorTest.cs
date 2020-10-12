@@ -24,9 +24,10 @@ namespace PairCalculatorTest
             possibleWordFour,
         };
 
-            PairCalculator pairCalculator = new PairCalculator(list, mainWord);
+            PairCalculator pairCalculator = new PairCalculator();
+            var pairs = pairCalculator.GetPairs(mainWord, list);
 
-            (pairCalculator.GetPairs(mainWord).Count).Should().Be(expected);
+            (pairs.Count).Should().Be(expected);
 
         }
 
@@ -42,9 +43,10 @@ namespace PairCalculatorTest
             possibleWordTwo,
         };
 
-            PairCalculator pairCalculator = new PairCalculator(list, mainWord);
+            PairCalculator pairCalculator = new PairCalculator();
+            var pairs = pairCalculator.GetPairs(mainWord, list);
 
-            (pairCalculator.GetPairs(mainWord).Count).Should().Be(0);
+            (pairs.Count).Should().Be(0);
 
         }
     }
