@@ -1,6 +1,7 @@
 ﻿using System;
 using Anagram;
 using Anagram.Solver;
+using FluentAssertions;
 using Xunit;
 
 namespace PairTest
@@ -20,8 +21,25 @@ namespace PairTest
             pair.firstWord = wordOne;
             pair.secondWord = wordTwo;
 
-            Assert.True(pair.firstWord == wordOne);
-            Assert.True(pair.secondWord == wordTwo);
+            (pair.firstWord).Should().Be(wordOne);
+            (pair.secondWord).Should().Be(wordTwo);
+        }
+
+
+        [Theory]
+        [InlineData("blue", "red", "blue red")]
+        [InlineData("window", "door", "window door")]
+        [InlineData("two", "three", "two three")]
+        public void CombinedWordTest(string wordOne, string wordTwo, string combinedWord)
+        {
+
+            var pair = new Pair();
+
+            pair.firstWord = wordOne;
+            pair.secondWord = wordTwo;
+
+            (pair.combinedWord).Should().Be(combinedWord);
+
         }
 
     }
