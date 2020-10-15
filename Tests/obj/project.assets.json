@@ -3723,11 +3723,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Tests\\Tests.csproj",
+      "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj",
       "packagesPath": "C:\\Users\\mohammad.danyal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Tests\\obj\\",
+      "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3746,8 +3746,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj": {
-              "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj"
+            "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj": {
+              "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj": {}
+    "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj": {
+    "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj",
+        "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj",
         "projectName": "Anagram",
-        "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj",
+        "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj",
         "packagesPath": "C:\\Users\\mohammad.danyal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\obj\\",
+        "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
