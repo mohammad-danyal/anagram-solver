@@ -33,7 +33,7 @@ namespace Anagram
                 if (inputvalidate.IsInputValid(word)) {
 
                     var solver = serviceProvider.GetService<IAnagramSolver>();
-                    var pairs = solver.FindAnagrams(word, serviceProvider); //
+                    var pairs = solver.FindAnagrams(word); //
 
                     foreach (var pair in pairs)
                     {

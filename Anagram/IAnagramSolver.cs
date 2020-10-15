@@ -5,7 +5,7 @@ namespace Anagram.Solver
 {
     public interface IAnagramSolver
     {
-        List<Pair> FindAnagrams(string word, ServiceProvider serviceProvider);
+        List<Pair> FindAnagrams(string word);
 
     }
 }
