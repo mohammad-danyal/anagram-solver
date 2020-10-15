@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
+using System.IO;
+using System.Net;
 
 namespace Anagram.Solver
 {
@@ -26,8 +25,16 @@ namespace Anagram.Solver
 
         public List<string> GetWords(string mainWord)
         {
+            var client = new WebClient();
+            string result = client.DownloadString("http://www-personal.umich.edu/~jlawler/wordlist");
+            var tempFile = CreateTmpFile();
 
-            using (System.IO.StreamReader sr = new System.IO.StreamReader(Reader.GetFile()))
+            StreamWriter streamWriter = File.AppendText(tempFile);
+            streamWriter.WriteLine(result);
+            streamWriter.Flush();
+            streamWriter.Close();
+
+            using (StreamReader sr = File.OpenText(tempFile))
             {
                 while (sr.Peek() >= 0)
                 {
@@ -37,7 +44,30 @@ namespace Anagram.Solver
                 }
             }
 
+            File.Delete(tempFile);
+
             return possibleWords;
+        }
+
+
+        private static string CreateTmpFile()
+        {
+            string fileName = string.Empty;
+
+            try
+            {
+                fileName = Path.GetTempFileName();
+
+                FileInfo fileInfo = new FileInfo(fileName);
+
+                fileInfo.Attributes = FileAttributes.Temporary;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Unable to create TEMP file or set its attributes: " + ex.Message);
+            }
+
+            return fileName;
         }
 
         private void CheckWords(string[] words, string mainWord)
