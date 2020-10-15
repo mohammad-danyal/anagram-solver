@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "royJB8MTT20e7nNCyPrcci0KnABxOLa7NhncOli/dw1blY0Rvi+6iJjmxzzQzQRLa5y7PDuOmw+ddi/6PTm2qQ==",
+  "dgSpecHash": "EzOuCfwDHIV9h1563aIOM/+t+LFF79OG089LpXwl+gSs8yGUyont4amdCjUgH5cH2g3w4S0QBqHPVDLBAgZspg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
+  "projectFilePath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.8\\microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
-    "C:\\Users\\danya\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512"
+    "C:\\Users\\mohammad.danyal\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.8\\microsoft.extensions.dependencyinjection.3.1.8.nupkg.sha512",
+    "C:\\Users\\mohammad.danyal\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.8\\microsoft.extensions.dependencyinjection.abstractions.3.1.8.nupkg.sha512"
   ],
   "logs": []
 }
