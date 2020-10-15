@@ -67,19 +67,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danya\\.nuget\\packages\\": {}
+    "C:\\Users\\mohammad.danyal\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
+      "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj",
       "projectName": "Anagram",
-      "projectPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\Anagram.csproj",
-      "packagesPath": "C:\\Users\\danya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danya\\Desktop\\anagram-solver\\Anagram\\obj\\",
+      "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\Anagram.csproj",
+      "packagesPath": "C:\\Users\\mohammad.danyal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgit\\Anagram\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\danya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mohammad.danyal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
