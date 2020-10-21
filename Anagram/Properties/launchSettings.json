@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Anagram": {
+      "commandName": "Project",
+      "commandLineArgs": "-n",
+      "environmentVariables": {
+        "Key": "Value"
+      }
+    }
+  }
+}

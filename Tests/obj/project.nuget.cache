@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1ZLkAFqdZAjDBEnMsRAAZSQG5x+/M6nxEbvQnUXYBp/P9wkKZeAbKPhyrVBQXTnNbmCFgll8JNeOzUGkxhcAJg==",
+  "dgSpecHash": "5pkUn6NQi/svFzj3s0bCC81s+ttsS5GpwZ9VHc6N1M7bnPD3OaKaRXAJE48jwpNnYXREvWmwnAXfLr8nvwnddg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mohammad.danyal\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",
     "C:\\Users\\mohammad.danyal\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\mohammad.danyal\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\mohammad.danyal\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

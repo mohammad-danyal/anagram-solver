@@ -6,7 +6,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="wordlist.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wordlist.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\Anagram.deps.json" />
+    <None Include="bin\Debug\netcoreapp3.1\Anagram.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\Anagram.exe" />
+    <None Include="bin\Debug\netcoreapp3.1\Anagram.pdb" />
+    <None Include="bin\Debug\netcoreapp3.1\Anagram.runtimeconfig.dev.json" />
+    <None Include="bin\Debug\netcoreapp3.1\Anagram.runtimeconfig.json" />
+    <None Include="bin\Debug\netcoreapp3.1\CommandLine.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Debug\netcoreapp3.1\wordlist.txt" />
   </ItemGroup>
 
 </Project>
