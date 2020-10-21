@@ -1,9 +1,6 @@
 ﻿using Anagram.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading;
 
 namespace Anagram.Solver
 {
@@ -17,7 +14,6 @@ namespace Anagram.Solver
 
     public class PairCalculator : IPairCalculator
     {
-        private List<string> possibleWords;
 
         /**
 * 

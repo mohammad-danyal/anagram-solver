@@ -1,15 +1,23 @@
 ﻿using Anagram.Solver;
+using CommandLine;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using System.Linq.Expressions;
 
 namespace Anagram
 {
 
     class Program
     {
+
+        class Options
+        {
+            [Option('w', "web", Required = false, HelpText = "Web Source implemenatation")]
+            public bool WebSource { get; set; }
+
+            [Option('n', "nonweb", Required = false, HelpText = "Non Web Source implemenatation")]
+            public bool NonWebSource { get; set; }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Anagram Solver!");
@@ -20,19 +28,30 @@ namespace Anagram
                 Console.WriteLine("Enter a word: ");
                 var word = Console.ReadLine();
 
-                var serviceProvider = new ServiceCollection()
-                    .AddTransient<IInputValidater, InputValidater>()
-                    .AddTransient<IAnagramSolver, AnagramSolver>()
-                    .AddTransient<IWordList, WordList>()
-                    .AddScoped<IPairCalculator, PairCalculator>()
+                var serviceCollection = new ServiceCollection()
+                           .AddTransient<IInputValidater, InputValidater>()
+                           .AddTransient<IAnagramSolver, AnagramSolver>()
+                           .AddScoped<IPairCalculator, PairCalculator>();
 
-                    .BuildServiceProvider();
+                Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(o =>
+                    {
+                        if (o.WebSource)
+                        {
+                            serviceCollection.AddTransient<IWordList, WordListWeb>();
 
-                var inputvalidate = serviceProvider.GetService<IInputValidater>(); //
+                        }
+                        else if (o.NonWebSource)
+                        {
+                            serviceCollection.AddTransient<IWordList, WordListNonWeb>();
+                        }
+                    });
 
-                if (inputvalidate.IsInputValid(word)) {
+                var inputvalidate = serviceCollection.BuildServiceProvider().GetService<IInputValidater>(); //
 
-                    var solver = serviceProvider.GetService<IAnagramSolver>();
+                if (inputvalidate.IsInputValid(word))
+                {
+
+                    var solver = serviceCollection.BuildServiceProvider().GetService<IAnagramSolver>();
                     var pairs = solver.FindAnagrams(word); //
 
                     foreach (var pair in pairs)
@@ -46,7 +65,8 @@ namespace Anagram
                         Console.WriteLine("No anagrams are possible for your word");
                     }
 
-                } else
+                }
+                else
                 {
                     Console.WriteLine("Error: Input is not a valid word");
                 }
