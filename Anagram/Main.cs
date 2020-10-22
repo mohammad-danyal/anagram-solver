@@ -34,17 +34,18 @@ namespace Anagram
                            .AddScoped<IPairCalculator, PairCalculator>();
 
                 Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(o =>
+                {
+                    if (o.WebSource)
                     {
-                        if (o.WebSource)
-                        {
-                            serviceCollection.AddTransient<IWordList, WordListWeb>();
+                        serviceCollection.AddTransient<IWordList, WordListWeb>();
 
-                        }
-                        else if (o.NonWebSource)
-                        {
-                            serviceCollection.AddTransient<IWordList, WordListNonWeb>();
-                        }
-                    });
+                    }
+                    else 
+                    {
+                        serviceCollection.AddTransient<IWordList, WordListNonWeb>();
+                  
+                    }
+                });
 
                 var inputvalidate = serviceCollection.BuildServiceProvider().GetService<IInputValidater>(); //
 

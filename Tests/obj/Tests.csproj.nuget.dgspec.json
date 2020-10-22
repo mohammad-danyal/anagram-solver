@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj": {}
+    "C:\\code\\AnagramSolver\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj": {
+    "C:\\code\\AnagramSolver\\Anagram\\Anagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj",
+        "projectUniqueName": "C:\\code\\AnagramSolver\\Anagram\\Anagram.csproj",
         "projectName": "Anagram",
-        "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj",
+        "projectPath": "C:\\code\\AnagramSolver\\Anagram\\Anagram.csproj",
         "packagesPath": "C:\\Users\\mohammad.danyal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\obj\\",
+        "outputPath": "C:\\code\\AnagramSolver\\Anagram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj": {
+    "C:\\code\\AnagramSolver\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\code\\AnagramSolver\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\Tests.csproj",
+        "projectPath": "C:\\code\\AnagramSolver\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\mohammad.danyal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Tests\\obj\\",
+        "outputPath": "C:\\code\\AnagramSolver\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj": {
-                "projectPath": "C:\\Users\\mohammad.danyal\\Documents\\anagramgitt\\Anagram\\Anagram.csproj"
+              "C:\\code\\AnagramSolver\\Anagram\\Anagram.csproj": {
+                "projectPath": "C:\\code\\AnagramSolver\\Anagram\\Anagram.csproj"
               }
             }
           }
