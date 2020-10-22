@@ -35,32 +35,12 @@ namespace Anagram.Solver
             return possibleWords;
         }
 
-        public byte[] GetFileViaHttp(string url)
+        private byte[] GetFileViaHttp(string url)
         {
             using (WebClient client = new WebClient())
             {
                 return client.DownloadData(url);
             }
-        }
-
-        private static string CreateTmpFile()
-        {
-            string fileName = string.Empty;
-
-            try
-            {
-                fileName = Path.GetTempFileName();
-
-                FileInfo fileInfo = new FileInfo(fileName);
-
-                fileInfo.Attributes = FileAttributes.Temporary;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Unable to create TEMP file or set its attributes: " + ex.Message);
-            }
-
-            return fileName;
         }
 
         private void CheckWords(string[] words, string mainWord)
