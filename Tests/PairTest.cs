@@ -1,6 +1,5 @@
-﻿using System;
-using Anagram;
-using Anagram.Solver;
+﻿using Anagram.Solver;
+using AnagramSolverAPI.Models;
 using FluentAssertions;
 using Xunit;
 
