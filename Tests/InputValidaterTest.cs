@@ -1,6 +1,5 @@
-using System;
-using Anagram;
 using Anagram.Solver;
+using AnagramSolverAPI.Services;
 using FluentAssertions;
 using Xunit;
 
@@ -18,7 +17,7 @@ namespace InputValidaterTest
 
             InputValidater inputvalidate = new InputValidater();
 
-           inputvalidate.IsInputValid(input).Should().Be(true);
+            inputvalidate.IsInputValid(input).Should().Be(true);
         }
 
         [Theory]

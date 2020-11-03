@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
-using Anagram;
 using Anagram.Solver;
+using Anagram.Solver.Services;
 using FluentAssertions;
+using System.Collections.Generic;
 using Xunit;
 
 namespace PairCalculatorTest
