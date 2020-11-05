@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using AnagramSolverAPI.Models;
+﻿using AnagramSolverAPI.Models;
+using System.Collections.Generic;
 
 namespace AnagramSolverAPI.Services
 {
