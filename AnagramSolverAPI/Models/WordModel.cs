@@ -5,14 +5,12 @@
     * Class for words.
     *
     * @author Mohammad Danyal
-    * @version September 2020
+    * @version October 2020
     */
 
-    public class Word
+    public class WordModel
     {
-
-        public string word { get; set; }
-
+        public string Word { get; set; }
     }
 }
 
