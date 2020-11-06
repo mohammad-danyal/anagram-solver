@@ -1,7 +1,7 @@
-﻿using AnagramSolverAPI.Models;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
+using System.Text;
 
 namespace AnagramSolverAPI.Services
 {
@@ -23,21 +23,31 @@ namespace AnagramSolverAPI.Services
         * @param mainWord holds the word which we are finding anagrams for.
         */
 
-        public List<string> GetWords(string mainWord, WordContext sc)
+        public List<string> GetWords(string mainWord)
         {
-            var str = sc.Words.ToList();
+            var result = GetFileViaHttp("http://www-personal.umich.edu/~jlawler/wordlist");
+            string str = Encoding.UTF8.GetString(result);
+            string[] strArr = str.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
-            CheckWords(str, mainWord);
+            CheckWords(strArr, mainWord);
 
             return possibleWords;
         }
 
-        private void CheckWords(List<Word> words, string mainWord)
+        private byte[] GetFileViaHttp(string url)
+        {
+            using (WebClient client = new WebClient())
+            {
+                return client.DownloadData(url);
+            }
+        }
+
+        private void CheckWords(string[] words, string mainWord)
         {
             foreach (var word in words)
             {
 
-                foreach (var c in word.word)
+                foreach (var c in word)
                 {
 
                     if (!mainWord.Contains(c))
@@ -54,8 +64,7 @@ namespace AnagramSolverAPI.Services
 
                 if (containsIllegalChar == false)
                 {
-
-                    possibleWords.Add(word.word);
+                    possibleWords.Add(word);
 
                 }
 

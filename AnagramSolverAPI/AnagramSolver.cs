@@ -18,19 +18,15 @@ namespace AnagramSolverAPI
         private readonly IWordList _words;
         private readonly IPairCalculator _pairCalculator;
 
-        private WordContext wordContext;
-
-        public AnagramSolver(IWordList words, IPairCalculator pairCalculator, WordContext sc)
+        public AnagramSolver(IWordList words, IPairCalculator pairCalculator)
         {
             _words = words ?? throw new ArgumentNullException(nameof(words));
             this._pairCalculator = pairCalculator ?? throw new ArgumentNullException(nameof(pairCalculator));
-
-            wordContext = sc;
         }
 
         public List<Pair> FindAnagrams(string word)
         {
-            var possibleWords = _words.GetWords(word, wordContext);
+            var possibleWords = _words.GetWords(word);
 
             return _pairCalculator.GetPairs(word, possibleWords);
         }

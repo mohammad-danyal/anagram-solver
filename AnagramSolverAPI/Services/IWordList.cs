@@ -4,6 +4,6 @@ namespace AnagramSolverAPI.Services
 {
     public interface IWordList
     {
-        List<string> GetWords(string mainWord, WordContext sc);
+        List<string> GetWords(string mainWord);
     }
 }
