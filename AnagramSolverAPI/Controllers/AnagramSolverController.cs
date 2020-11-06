@@ -1,5 +1,4 @@
-﻿using Anagram.Solver;
-using AnagramSolverAPI.Models;
+﻿using AnagramSolverAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -15,7 +14,6 @@ namespace AnagramSolverAPI.Controllers
         {
             _solver = solver;
         }
-
 
         [HttpGet("GetAnagrams/{word}")]
         public List<Pair> GetAnagrams(string word)

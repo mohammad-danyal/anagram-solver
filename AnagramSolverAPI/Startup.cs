@@ -1,8 +1,8 @@
-using Anagram.Solver;
 using Anagram.Solver.Services;
 using AnagramSolverAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +27,9 @@ namespace AnagramSolverAPI
             services.AddTransient<IWordList, WordListWeb>();
 
             services.AddControllers();
+
+            services.AddDbContext<WordContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,17 +39,15 @@ namespace AnagramSolverAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+            app.UseStaticFiles();
+            app.UseDeveloperExceptionPage();
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AnagramSolverAPI.Models;
 using AnagramSolverAPI.Services;
-using AnagramSolverAPI.Models;
+using System;
+using System.Collections.Generic;
 
 namespace AnagramSolverAPI
 {
