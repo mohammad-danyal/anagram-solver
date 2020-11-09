@@ -6,7 +6,7 @@ using System.Text;
 namespace AnagramSolverAPI.Services
 {
     /**
-    * Class which retrieves a word list from a URL comparing it to a given word's properties.
+    * Implementation of a web source word list
     *
     * @author Mohammad Danyal
     * @version October 2020
@@ -14,10 +14,6 @@ namespace AnagramSolverAPI.Services
 
     public class WordListWeb : IWordList
     {
-        List<string> possibleWords = new List<string>();
-        bool containsIllegalChar = false;
-        public string mainWord;
-
         /**
         * 
         * @param mainWord holds the word which we are finding anagrams for.
@@ -25,11 +21,12 @@ namespace AnagramSolverAPI.Services
 
         public List<string> GetWords(string mainWord)
         {
+            List<string> possibleWords = new List<string>();
             var result = GetFileViaHttp("http://www-personal.umich.edu/~jlawler/wordlist");
             string str = Encoding.UTF8.GetString(result);
             string[] strArr = str.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
-            CheckWords(strArr, mainWord);
+            CheckWords(strArr, mainWord, possibleWords);
 
             return possibleWords;
         }
@@ -42,14 +39,14 @@ namespace AnagramSolverAPI.Services
             }
         }
 
-        private void CheckWords(string[] words, string mainWord)
+        private void CheckWords(string[] words, string mainWord, List<string> possibleWords)
         {
+            bool containsIllegalChar = false;
+
             foreach (var word in words)
             {
-
                 foreach (var c in word)
                 {
-
                     if (!mainWord.Contains(c))
                     {
                         containsIllegalChar = true;
@@ -59,18 +56,13 @@ namespace AnagramSolverAPI.Services
                     {
                         containsIllegalChar = false;
                     }
-
                 }
 
                 if (containsIllegalChar == false)
                 {
                     possibleWords.Add(word);
-
                 }
-
             }
         }
     }
-
-
 }

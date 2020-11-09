@@ -13,9 +13,6 @@ namespace AnagramSolverAPI.Services
 
     public class WordListDB : IWordList
     {
-        List<string> possibleWords = new List<string>();
-        bool containsIllegalChar = false;
-        public string mainWord;
         private readonly WordContext _wordContext;
 
         public WordListDB(WordContext wordContext)
@@ -30,21 +27,21 @@ namespace AnagramSolverAPI.Services
 
         public List<string> GetWords(string mainWord)
         {
+            List<string> possibleWords = new List<string>();
             var str = _wordContext.Words.ToList();
 
-            CheckWords(str, mainWord);
+            CheckWords(str, mainWord, possibleWords);
 
             return possibleWords;
         }
 
-        private void CheckWords(List<WordModel> words, string mainWord)
+        private void CheckWords(List<WordModel> words, string mainWord, List<string> possibleWords)
         {
+            bool containsIllegalChar = false;
             foreach (var word in words)
             {
-
                 foreach (var c in word.Word)
                 {
-
                     if (!mainWord.Contains(c))
                     {
                         containsIllegalChar = true;
@@ -54,19 +51,13 @@ namespace AnagramSolverAPI.Services
                     {
                         containsIllegalChar = false;
                     }
-
                 }
 
                 if (containsIllegalChar == false)
                 {
-
                     possibleWords.Add(word.Word);
-
                 }
-
             }
         }
     }
-
-
 }
