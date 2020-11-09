@@ -3,7 +3,6 @@ using System.Linq;
 
 namespace AnagramSolverAPI.Services
 {
-
     /**
     * Input validation class ensuring input is of the correct format of a word.
     *
@@ -22,7 +21,6 @@ namespace AnagramSolverAPI.Services
         {
             return (s.All(Char.IsLetter));
         }
-
     }
 }
 

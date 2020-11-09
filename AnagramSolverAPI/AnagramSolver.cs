@@ -5,12 +5,11 @@ using System.Collections.Generic;
 
 namespace AnagramSolverAPI
 {
-
     /**
     * Anagram solver class.
     *
     * @author Mohammad Danyal
-    * @version September 2020
+    * @version October 2020
     */
 
     public class AnagramSolver : IAnagramSolver
@@ -27,7 +26,6 @@ namespace AnagramSolverAPI
         public List<Pair> FindAnagrams(string word)
         {
             var possibleWords = _words.GetWords(word);
-
             return _pairCalculator.GetPairs(word, possibleWords);
         }
     }

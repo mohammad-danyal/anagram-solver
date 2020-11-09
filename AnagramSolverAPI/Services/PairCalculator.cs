@@ -17,8 +17,7 @@ namespace Anagram.Solver.Services
     public class PairCalculator : IPairCalculator
     {
 
-
-        /**
+/**
 * 
 * @param possibleWords holds a list of all the words that are of the correct length and alphabet.
 * @return the pairs of words which are of the correct length.
@@ -48,11 +47,8 @@ namespace Anagram.Solver.Services
                 {
                     Pairs.Add(possiblePair);
                 }
-
             }
-
             return Pairs;
-
         }
     }
 }

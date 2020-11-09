@@ -1,8 +1,7 @@
 ﻿namespace AnagramSolverAPI.Models
 {
-
     /**
-    * Class for words.
+    * Modwl class for a word.
     *
     * @author Mohammad Danyal
     * @version October 2020

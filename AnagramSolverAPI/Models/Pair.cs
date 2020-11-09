@@ -1,6 +1,5 @@
 ﻿namespace AnagramSolverAPI.Models
 {
-
     /**
     * Class for the pairs of words.
     *
@@ -17,9 +16,7 @@
         public string combinedWord
         {
             get { return (firstWord + " " + secondWord); }
-
         }
-
     }
 }
 
