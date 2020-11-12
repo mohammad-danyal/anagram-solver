@@ -17,7 +17,7 @@ namespace AnagramSolverAPI.Services
 
         public WordListDB(WordContext wordContext)
         {
-            _wordContext = wordContext;
+            _wordContext = wordContext ?? throw new System.ArgumentNullException(nameof(wordContext));
         }
 
         /**
@@ -27,6 +27,11 @@ namespace AnagramSolverAPI.Services
 
         public List<string> GetWords(string mainWord)
         {
+            if (mainWord is null)
+            {
+                throw new System.ArgumentNullException(nameof(mainWord));
+            }
+
             List<string> possibleWords = new List<string>();
             var str = _wordContext.Words.ToList();
 

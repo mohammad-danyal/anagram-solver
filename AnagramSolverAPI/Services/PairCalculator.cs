@@ -16,28 +16,44 @@ namespace Anagram.Solver.Services
 
     public class PairCalculator : IPairCalculator
     {
-
-/**
-* 
-* @param possibleWords holds a list of all the words that are of the correct length and alphabet.
-* @return the pairs of words which are of the correct length.
+        /**
+        * 
+        * @param possibleWords holds a list of all the words that are of the correct length and alphabet.
+        * @return the pairs of words which are of the correct length.
 */
-
         public List<Pair> GetPairs(string mainWord, List<string> possibleWords)
         {
+            if (mainWord is null)
+            {
+                throw new System.ArgumentNullException(nameof(mainWord));
+            }
+
+            if (possibleWords is null)
+            {
+                throw new System.ArgumentNullException(nameof(possibleWords));
+            }
             var possiblePairs = (possibleWords.SelectMany(possibleWordOne => possibleWords
             .Where(possibleWordTwo => !(possibleWordOne == possibleWordTwo))
             .Where(possibleWordTwo => (possibleWordOne.Length + possibleWordTwo.Length) == mainWord.Length)
-            .Select(possibleWordTwo => new Pair { firstWord = possibleWordOne, secondWord = possibleWordTwo }))).ToList();
+            .Select(possibleWordTwo => new Pair { 
+                firstWord = possibleWordOne, secondWord = possibleWordTwo }))).ToList();
             return SortPairs(mainWord, possiblePairs);
         }
 
         public List<Pair> SortPairs(string mainWord, List<Pair> possiblePairs)
         {
+            if (mainWord is null)
+            {
+                throw new System.ArgumentNullException(nameof(mainWord));
+            }
+
+            if (possiblePairs is null)
+            {
+                throw new System.ArgumentNullException(nameof(possiblePairs));
+            }
 
             var Pairs = new List<Pair>();
 
-            char[] ch1 = mainWord.ToCharArray();
             foreach (var possiblePair in possiblePairs)
             {
                 var val1 = mainWord.SortAlphabetically();
@@ -48,9 +64,8 @@ namespace Anagram.Solver.Services
                     Pairs.Add(possiblePair);
                 }
             }
+
             return Pairs;
         }
     }
 }
-
-
