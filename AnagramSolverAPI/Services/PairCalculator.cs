@@ -1,6 +1,7 @@
 ﻿using AnagramSolverAPI.Extensions;
 using AnagramSolverAPI.Models;
 using AnagramSolverAPI.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,18 +26,21 @@ namespace Anagram.Solver.Services
         {
             if (mainWord is null)
             {
-                throw new System.ArgumentNullException(nameof(mainWord));
+                throw new ArgumentNullException(nameof(mainWord));
             }
 
             if (possibleWords is null)
             {
-                throw new System.ArgumentNullException(nameof(possibleWords));
+                throw new ArgumentNullException(nameof(possibleWords));
             }
             var possiblePairs = (possibleWords.SelectMany(possibleWordOne => possibleWords
             .Where(possibleWordTwo => !(possibleWordOne == possibleWordTwo))
             .Where(possibleWordTwo => (possibleWordOne.Length + possibleWordTwo.Length) == mainWord.Length)
-            .Select(possibleWordTwo => new Pair { 
-                firstWord = possibleWordOne, secondWord = possibleWordTwo }))).ToList();
+            .Select(possibleWordTwo => new Pair
+            {
+                firstWord = possibleWordOne,
+                secondWord = possibleWordTwo
+            }))).ToList();
             return SortPairs(mainWord, possiblePairs);
         }
 
@@ -44,12 +48,12 @@ namespace Anagram.Solver.Services
         {
             if (mainWord is null)
             {
-                throw new System.ArgumentNullException(nameof(mainWord));
+                throw new ArgumentNullException(nameof(mainWord));
             }
 
             if (possiblePairs is null)
             {
-                throw new System.ArgumentNullException(nameof(possiblePairs));
+                throw new ArgumentNullException(nameof(possiblePairs));
             }
 
             var Pairs = new List<Pair>();
