@@ -1,9 +1,7 @@
-﻿using AnagramSolverAPI.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NSwag.Annotations;
 using System;
-using System.Collections.Generic;
 
 namespace AnagramSolverAPI.Controllers
 {
@@ -15,11 +13,12 @@ namespace AnagramSolverAPI.Controllers
 
         public AnagramSolverController(IAnagramSolver solver)
         {
-            _solver = solver ?? throw new System.ArgumentNullException(nameof(solver));
+            _solver = solver ?? throw new ArgumentNullException(nameof(solver));
         }
 
         [HttpGet("GetAnagrams/{word}", Name = "GetAnagrams")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [OpenApiOperation("GetAnagrams")]
         public IActionResult GetAnagrams(string word)
@@ -30,12 +29,14 @@ namespace AnagramSolverAPI.Controllers
             }
             var anagrams = _solver.FindAnagrams(word);
 
-            if (anagrams is null) 
+            if (anagrams is null)
             {
                 return NotFound();
-            } else { 
+            }
+            else
+            {
                 return Ok(anagrams);
-            }            
+            }
         }
     }
 }
