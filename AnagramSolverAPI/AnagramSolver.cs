@@ -20,11 +20,16 @@ namespace AnagramSolverAPI
         public AnagramSolver(IWordList words, IPairCalculator pairCalculator)
         {
             _words = words ?? throw new ArgumentNullException(nameof(words));
-            this._pairCalculator = pairCalculator ?? throw new ArgumentNullException(nameof(pairCalculator));
+            _pairCalculator = pairCalculator ?? throw new ArgumentNullException(nameof(pairCalculator));
         }
 
         public List<Pair> FindAnagrams(string word)
         {
+            if (word is null)
+            {
+                throw new ArgumentNullException(nameof(word));
+            }
+
             var possibleWords = _words.GetWords(word);
             return _pairCalculator.GetPairs(word, possibleWords);
         }

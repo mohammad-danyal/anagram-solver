@@ -14,11 +14,21 @@ namespace AnagramSolverAPI.Services
     {
         public bool IsInputValid(string input)
         {
+            if (input is null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
             return (IsAllLetters(input));
         }
 
-        static bool IsAllLetters(string s)
+        public static bool IsAllLetters(string s)
         {
+            if (s is null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
             return (s.All(Char.IsLetter));
         }
     }

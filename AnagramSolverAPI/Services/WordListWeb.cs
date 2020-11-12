@@ -14,6 +14,7 @@ namespace AnagramSolverAPI.Services
 
     public class WordListWeb : IWordList
     {
+
         /**
         * 
         * @param mainWord holds the word which we are finding anagrams for.
@@ -21,6 +22,11 @@ namespace AnagramSolverAPI.Services
 
         public List<string> GetWords(string mainWord)
         {
+            if (mainWord is null)
+            {
+                throw new ArgumentNullException(nameof(mainWord));
+            }
+
             List<string> possibleWords = new List<string>();
             var result = GetFileViaHttp("http://www-personal.umich.edu/~jlawler/wordlist");
             string str = Encoding.UTF8.GetString(result);

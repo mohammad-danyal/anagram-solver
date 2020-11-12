@@ -28,6 +28,9 @@ namespace AnagramSolverAPI
 
             services.AddControllers();
 
+            // Register the Swagger services
+            services.AddOpenApiDocument(c => { c.Version = "v1"; c.Title = "AnagramSolverAPI"; });
+
             services.AddDbContext<WordContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddMvc();
         }
@@ -48,6 +51,11 @@ namespace AnagramSolverAPI
             });
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
+
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
         }
     }
 }

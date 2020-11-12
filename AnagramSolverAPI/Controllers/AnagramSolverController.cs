@@ -1,6 +1,7 @@
-﻿using AnagramSolverAPI.Models;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using NSwag.Annotations;
+using System;
 
 namespace AnagramSolverAPI.Controllers
 {
@@ -12,13 +13,30 @@ namespace AnagramSolverAPI.Controllers
 
         public AnagramSolverController(IAnagramSolver solver)
         {
-            _solver = solver;
+            _solver = solver ?? throw new ArgumentNullException(nameof(solver));
         }
 
-        [HttpGet("GetAnagrams/{word}")]
-        public List<Pair> GetAnagrams(string word)
+        [HttpGet("GetAnagrams/{word}", Name = "GetAnagrams")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [OpenApiOperation("GetAnagrams")]
+        public IActionResult GetAnagrams(string word)
         {
-            return _solver.FindAnagrams(word);
+            if (String.IsNullOrWhiteSpace(word))
+            {
+                BadRequest("Bad Request: No word has been specified");
+            }
+            var anagrams = _solver.FindAnagrams(word);
+
+            if (anagrams is null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(anagrams);
+            }
         }
     }
 }
